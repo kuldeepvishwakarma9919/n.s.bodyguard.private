@@ -148,6 +148,32 @@ html, body {
         @media (max-width: 991px) {
             .navbar-collapse { background: #fff; padding: 40px; border-top: 5px solid var(--primary-gold); }
         }
+
+
+      /* About Section Balance Fix */
+.about-img-container {
+    height: 100%;
+    min-height: 400px; /* Mobile ke liye height */
+    max-height: 550px; /* Desktop par text ke barabar rakhne ke liye */
+    overflow: hidden;
+    border: 8px solid #f8f9fa; /* Ek luxury border */
+}
+
+.about-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Isse image stretch nahi hogi, crop hokar set ho jayegi */
+    object-position: top; /* Face focus karne ke liye */
+}
+
+.director-message {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 25px;
+    border-left: 5px solid var(--primary-gold);
+    margin-top: 25px;
+    position: relative;
+}
     </style>
 </head>
 <body>
@@ -193,34 +219,45 @@ html, body {
         </div>
     </div>
 
-    <section id="about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <h6 class="text-warning fw-bold mb-3" style="letter-spacing: 3px;">WHO WE ARE</h6>
-                    <h2 class="display-4 mb-4">WE SECURE <span class="text-warning">KOLKATA</span></h2>
-                    <p class="lead text-muted mb-4">N.S Bodyguard Private Ltd. is not just a security company; we are a tactical unit. For over 15 years, we have provided unparalleled protection for VIPs, Events, and Corporate assets.</p>
-                    <div class="row g-4 mt-2">
-                        <div class="col-6">
-                            <div class="p-3 bg-light border-start border-warning border-5">
-                                <h2 class="mb-0">15+</h2>
-                                <small class="fw-bold">YEARS OF SERVICE</small>
-                            </div>
+   <section id="about">
+    <div class="container">
+        <div class="row align-items-center g-5"> <div class="col-lg-6" data-aos="fade-right">
+                <h6 class="text-warning fw-bold mb-3" style="letter-spacing: 3px;">WHO WE ARE</h6>
+                <h2 class="display-4 mb-4">WE SECURE <span class="text-warning">KOLKATA</span></h2>
+                <p class="lead text-muted mb-4">N.S Bodyguard Private Ltd. is not just a security company; we are a tactical unit. For over 15 years, we have provided unparalleled protection for VIPs, Events, and Corporate assets.</p>
+                
+                <div class="row g-4 mt-2">
+                    <div class="col-6">
+                        <div class="p-3 bg-light border-start border-warning border-5">
+                            <h2 class="mb-0">15+</h2>
+                            <small class="fw-bold">YEARS OF SERVICE</small>
                         </div>
-                        <div class="col-6">
-                            <div class="p-3 bg-light border-start border-warning border-5">
-                                <h2 class="mb-0">500+</h2>
-                                <small class="fw-bold">MISSIONS DONE</small>
-                            </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-3 bg-light border-start border-warning border-5">
+                            <h2 class="mb-0">500+</h2>
+                            <small class="fw-bold">MISSIONS DONE</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="zoom-in">
-                    <img src="img/se.jpeg" class="img-fluid shadow-lg">
+
+                <div class="director-message shadow-lg" data-aos="fade-up">
+                    <i class="fas fa-quote-right" style="position: absolute; right: 20px; opacity: 0.2; font-size: 2rem;"></i>
+                    <p class="fst-italic mb-0" style="font-size: 1.1rem;">
+                        "Hamara maqsad sirf suraksha dena nahi, balki ek nishchint vatavaran pradan karna hai. Aapki hifazat hamari pehli aur aakhri zimmedari hai."
+                    </p>
+                    <span class="director-name" style="color: var(--primary-gold); font-weight: 800; display: block; margin-top: 10px;">— NAZIR SHEKH (Director)</span>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mt-5 mt-lg-0" data-aos="zoom-in">
+                <div class="about-img-container shadow-lg">
+                    <img src="img/team/s2.jpeg" alt="Nazir Shekh Director">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="services" class="bg-light">
         <div class="container">
@@ -355,7 +392,10 @@ html, body {
                                     <option selected disabled>SELECT SERVICE TYPE</option>
                                     <option>Bouncer Service</option>
                                     <option>VIP Security</option>
-                                    <option>Wedding Shield</option>
+                                    <option>Marriage Program</option>
+                                    <option>Birthday Party</option>
+                                    <option>Event</option>
+                                    <option>Personal Bodyguard</option>
                                 </select>
                             </div>
                             <div class="col-12"><textarea class="form-control contact-input" rows="5" placeholder="MESSAGE"></textarea></div>
@@ -374,7 +414,7 @@ html, body {
                     <h2 class="navbar-brand text-white mb-4">N.S <span>BODYGUARD</span></h2>
                     <p style="color:#aaa; font-size:1rem;">Kolkata's most trusted name in personal and event security since 2011. Your safety is our mission.</p>
                     <div class="mt-4">
-                        <a href="https://www.facebook.com/share/1BwW3445n2/" class="social-circle"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/share/1BwW3445n2/" target="_blank" class="social-circle"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-circle"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
                     </div>
@@ -403,7 +443,7 @@ html, body {
                 </div>
             </div>
             <div class="text-center mt-5 pt-4 border-top border-secondary">
-                <p class="small mb-0" style="color: #fff;;">&copy; 2026 N.S BODYGUARD PRIVATE LTD. DESIGNED FOR THE Webnigya Digital.</p>
+                <p class="small mb-0" style="color: #fff;;">&copy; 2026 N.S BODYGUARD PRIVATE LTD. DESIGNED By Webnigya Digital Solutions.</p>
             </div>
         </div>
     </footer>
