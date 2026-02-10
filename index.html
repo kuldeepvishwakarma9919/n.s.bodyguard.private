@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N.S BODYGUARD PRIVATE | Elite Security Services</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        :root {
+            --primary-gold: #b8860b;
+            --deep-gold: #8b6508;
+            --soft-bg: #fdfdfd;
+            --text-dark: #1a1a1a;
+            --text-muted: #4a4a4a;
+        }
+html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-dark);
+            font-size: 1.1rem; /* Bada Text */
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {  text-transform: uppercase; font-weight: 700; }
+
+        /* --- LUXURY HEADER --- */
+        .navbar {
+            padding: 25px 0;
+            background: #ffffff !important;
+            border-bottom: 4px solid var(--primary-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: 0.4s ease;
+        }
+        .navbar-brand {  font-weight: 800; letter-spacing: 1px; }
+        .navbar-brand span { color: var(--primary-gold); }
+
+        .navbar-brand img{
+            width: 60px;
+            height: 60px;
+        }
+        .nav-link {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text-dark) !important;
+            margin: 0 15px;
+            text-transform: uppercase;
+        }
+        .nav-link:hover { color: var(--primary-gold) !important; }
+
+        /* --- HERO SECTION --- */
+        .hero-slider { height: 100vh; position: relative; }
+        .hero-img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); }
+        .hero-content {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            text-align: center; width: 90%; color: #fff;
+        }
+        .hero-content h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.2; }
+        .hero-content p { font-size: 1.4rem; letter-spacing: 4px; font-weight: 400; }
+
+        /* --- BUTTONS --- */
+        .btn-gold {
+            background: var(--text-dark);
+            color: #fff !important;
+            padding: 18px 45px;
+            font-weight: 800;
+            font-size: 1rem;
+            border: none;
+            border-radius: 0;
+            transition: 0.4s;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 5px 5px 0 var(--primary-gold);
+        }
+        .btn-gold:hover {
+            background: var(--primary-gold);
+            transform: translate(-3px, -3px);
+            box-shadow: 8px 8px 0 var(--text-dark);
+        }
+
+        /* --- SERVICES CARDS --- */
+        section { padding: 120px 0; }
+        .section-title { font-size: 2.8rem; margin-bottom: 50px; position: relative; }
+        .section-title::after {
+            content: ''; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%);
+            width: 80px; height: 5px; background: var(--primary-gold);
+        }
+
+        .service-card {
+            background: #fff;
+            padding: 60px 40px;
+            border: 1px solid #eee;
+            text-align: center;
+            transition: 0.4s;
+            height: 100%;
+        }
+        .service-card:hover {
+            border-color: var(--primary-gold);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            transform: translateY(-10px);
+        }
+        .service-card i { font-size: 3.5rem; color: var(--primary-gold); margin-bottom: 25px; }
+        .service-card h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--text-dark); }
+        .service-card p { font-size: 1.1rem; color: var(--text-muted); }
+
+        /* --- CONTACT SECTION --- */
+        .contact-input {
+            border: 2px solid #eee !important;
+            padding: 18px !important;
+            font-size: 1.1rem !important;
+            border-radius: 0 !important;
+            margin-bottom: 20px;
+        }
+        .contact-input:focus { border-color: var(--primary-gold) !important; box-shadow: none !important; }
+        .contact-box { background: #f9f9f9; padding: 50px; border-top: 8px solid var(--primary-gold); }
+
+        /* --- FOOTER UPGRADE --- */
+        footer { background: #111; color: #fff; padding: 100px 0 40px; }
+        .footer-title { color: var(--primary-gold); font-weight: 800; margin-bottom: 30px; }
+        .footer-link { color: #ccc; text-decoration: none; display: block; margin-bottom: 15px; font-weight: 500; transition: 0.3s; }
+        .footer-link:hover { color: var(--primary-gold); padding-left: 10px; }
+        .social-circle {
+            width: 50px; height: 50px; background: #222; display: inline-flex;
+            align-items: center; justify-content: center; color: #fff;
+            margin-right: 15px; transition: 0.3s;
+        }
+        .social-circle:hover { background: var(--primary-gold); color: #fff; transform: rotate(360deg); }
+
+        /* --- WHATSAPP --- */
+        .wa-float {
+            position: fixed; bottom: 40px; right: 40px; background: #25d366;
+            width: 70px; height: 70px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 35px;
+            color: white; z-index: 1000; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse { background: #fff; padding: 40px; border-top: 5px solid var(--primary-gold); }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/916291142710" class="wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo.jpeg" alt=""></a>
+            <button class="navbar-toggler border-0" type="button" onclick="toggleSidebar()">
+                <i class="fas fa-bars-staggered"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <span class="close-menu d-lg-none" onclick="toggleSidebar()" style="font-size:2.5rem; float:right;">&times;</span>
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#home" onclick="toggleSidebar()">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" onclick="toggleSidebar()">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services" onclick="toggleSidebar()">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team" onclick="toggleSidebar()">Commanders</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery" onclick="toggleSidebar()">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" onclick="toggleSidebar()">Contact</a></li>
+                    <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
+                        <a class="btn-gold" href="tel:6291142710">CALL HQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="swiper hero-slider" id="home">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2000" class="hero-img">
+                <div class="hero-content">
+                    <p data-aos="fade-up">N.S Body Guard Private Limited</p>
+                    <h1 data-aos="fade-up" data-aos-delay="200">All Program Security <br> Guard Service</h1>
+                    <div class="mt-5" data-aos="zoom-in" data-aos-delay="400">
+                        <a href="#contact" class="btn-gold">BOOK SECURITY TEAM</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h6 class="text-warning fw-bold mb-3" style="letter-spacing: 3px;">WHO WE ARE</h6>
+                    <h2 class="display-4 mb-4">WE SECURE <span class="text-warning">KOLKATA</span></h2>
+                    <p class="lead text-muted mb-4">N.S Bodyguard Private Ltd. is not just a security company; we are a tactical unit. For over 15 years, we have provided unparalleled protection for VIPs, Events, and Corporate assets.</p>
+                    <div class="row g-4 mt-2">
+                        <div class="col-6">
+                            <div class="p-3 bg-light border-start border-warning border-5">
+                                <h2 class="mb-0">15+</h2>
+                                <small class="fw-bold">YEARS OF SERVICE</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="p-3 bg-light border-start border-warning border-5">
+                                <h2 class="mb-0">500+</h2>
+                                <small class="fw-bold">MISSIONS DONE</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="zoom-in">
+                    <img src="img/se.jpeg" class="img-fluid shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">OUR SERVICES</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="service-card">
+                        <i class="fas fa-user-ninja"></i>
+                        <h3>BOUNCER SERVICE</h3>
+                        <p>High-end crowd management and gate security for events and clubs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>VIP SECURITY</h3>
+                        <p>Executive close-protection for celebrities and high-profile individuals.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <i class="fas fa-gem"></i>
+                        <h3>WEDDING SHIELD</h3>
+                        <p>Specialized security to keep your marriage celebrations safe and private.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="service-card">
+                        <i class="fas fa-shield-halved"></i>
+                        <h3>PERSONAL P.S.O</h3>
+                        <p>Armed and unarmed personal security officers for 24/7 individual safety.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <i class="fas fa-building-shield"></i>
+                        <h3>CORPORATE OPS</h3>
+                        <p>Business asset protection and office security monitoring services.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <i class="fas fa-user-secret"></i>
+                        <h3>UNDERCOVER</h3>
+                        <p>Discreet intelligence and plain-clothes surveillance for protection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2 class="text-center section-title">Our Team</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+                    <div class="position-relative overflow-hidden" style="height:450px; border:1px solid #ddd;">
+                        <img src="img/team/s1.jpeg" class="w-100 h-100 object-fit-cover">
+                        <div class="position-absolute bottom-0 w-100 p-4 bg-white text-center">
+                            <h4 class="mb-0">NARAYAN TIWARI</h4><p class="text-warning mb-0 fw-bold">Security Officer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="position-relative overflow-hidden" style="height:450px; border:1px solid #ddd;">
+                        <img src="img/team/s2.jpeg" class="w-100 h-100 object-fit-cover">
+                        <div class="position-absolute bottom-0 w-100 p-4 bg-white text-center">
+                            <h4 class="mb-0">NAZIR SHEKH</h4><p class="text-warning mb-0 fw-bold">BODYGUARD DIRECTOR</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="position-relative overflow-hidden" style="height:450px; border:1px solid #ddd;">
+                        <img src="img/team/s3.jpeg" class="w-100 h-100 object-fit-cover">
+                        <div class="position-absolute bottom-0 w-100 p-4 bg-white text-center">
+                            <h4 class="mb-0">NAIDU TIWARI</h4><p class="text-warning mb-0 fw-bold">BODYGUARD MANAGER</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Gallery</h2>
+            <div class="row g-3">
+                <div class="col-md-3"><img src="img/se.jpeg" class="img-fluid w-100 h-100 shadow"></div>
+                <div class="col-md-3"><img src="img/se2.jpeg" class="img-fluid w-100 h-100 shadow"></div>
+                <div class="col-md-3"><img src="img/se3.jpeg" class="img-fluid w-100 h-100 shadow"></div>
+                <div class="col-md-3"><img src="img/se4.jpeg" class="img-fluid w-100 h-100 shadow"></div>
+                <div class="col-md-3"><img src="img/se5.jpeg" class="img-fluid w-100 h-100 shadow"></div>
+                <div class="col-md-3"><img src="img/se6.jpeg" class="img-fluid w-100 h-100 shadow"></div>
+                <div class="col-md-3"><img src="img/se7.jpeg" class="img-fluid w-100 h-100 shadow"></div>
+                <div class="col-md-3"><img src="img/se8.jpeg" class="img-fluid w-100 h-100 shadow"></div>
+                <div class="col-md-3"><img src="img/se9.jpeg" class="img-fluid w-100 h-100 shadow"></div>
+                <div class="col-md-3"><img src="img/se10.jpeg" class="img-fluid w-100 h-100 shadow"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="contact-box">
+                        <h2 class="mb-4">GET IN <span class="text-warning">TOUCH</span></h2>
+                        <p class="mb-5">Contact our headquarters for immediate security deployment.</p>
+                        <div class="d-flex mb-4">
+                            <i class="fas fa-map-marker-alt fs-3 text-warning me-3"></i>
+                            <div><h5 class="mb-0">HQ ADDRESS</h5><p>P 12 CIT ROAD ENTALLY, KOLKATA</p></div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <i class="fas fa-phone-alt fs-3 text-warning me-3"></i>
+                            <div><h5 class="mb-0">24/7 HOTLINE</h5><p>+91 6291142710</p></div>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fas fa-envelope fs-3 text-warning me-3"></i>
+                            <div><h5 class="mb-0">SECURE EMAIL</h5><p>n.sbodyguardprivate071@gmail.com</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <form action="#" class="ps-lg-4">
+                        <div class="row">
+                            <div class="col-md-6"><input type="text" class="form-control contact-input" placeholder="FULL NAME"></div>
+                            <div class="col-md-6"><input type="number" class="form-control contact-input" placeholder="Mobile No"></div>
+                            <div class="col-12">
+                                <select class="form-select contact-input">
+                                    <option selected disabled>SELECT SERVICE TYPE</option>
+                                    <option>Bouncer Service</option>
+                                    <option>VIP Security</option>
+                                    <option>Wedding Shield</option>
+                                </select>
+                            </div>
+                            <div class="col-12"><textarea class="form-control contact-input" rows="5" placeholder="MESSAGE"></textarea></div>
+                            <div class="col-12"><button type="submit" class="btn-gold w-100 py-3">SEND REQUEST</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h2 class="navbar-brand text-white mb-4">N.S <span>BODYGUARD</span></h2>
+                    <p style="color:#aaa; font-size:1rem;">Kolkata's most trusted name in personal and event security since 2011. Your safety is our mission.</p>
+                    <div class="mt-4">
+                        <a href="https://www.facebook.com/share/1BwW3445n2/" class="social-circle"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="footer-title">NAVIGATION</h5>
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About Us</a>
+                    <a href="#services" class="footer-link">Services</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="footer-title">OUR SERVICES</h5>
+                    <a href="#" class="footer-link">VIP Protection</a>
+                    <a href="#" class="footer-link">Bouncer Units</a>
+                    <a href="#" class="footer-link">Wedding Security</a>
+                    <a href="#" class="footer-link">PSO Officers</a>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="footer-title">NEWSLETTER</h5>
+                    <p class="small" style="color:#aaa;">Subscribe for security tips.</p>
+                    <div class="input-group mt-3">
+                        <input type="text" class="form-control bg-dark text-white border-0" placeholder="Email">
+                        <button class="btn btn-warning"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-4 border-top border-secondary">
+                <p class="small mb-0" style="color: #fff;;">&copy; 2026 N.S BODYGUARD PRIVATE LTD. DESIGNED FOR THE Webnigya Digital.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        const swiper = new Swiper('.hero-slider', { effect: 'fade', autoplay: { delay: 5000 }, loop: true });
+
+        function toggleSidebar() {
+            document.getElementById('navbarNav').classList.toggle('show');
+        }
+
+        window.onscroll = function() {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 100) {
+                nav.style.padding = "10px 0";
+            } else {
+                nav.style.padding = "25px 0";
+            }
+        };
+    </script>
+</body>
+</html>
